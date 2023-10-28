@@ -18,7 +18,7 @@ public class StringDinamicArray {
             strings = newString;
         }
 
-        public void delete(int index) throws IllegalArgumentException{
+        public void delete (int index) throws IllegalArgumentException{
             if (index < 0 || index >= strings.length){
                 throw new IllegalArgumentException("Out of Index..");
                 }

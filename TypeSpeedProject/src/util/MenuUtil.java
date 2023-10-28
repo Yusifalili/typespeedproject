@@ -6,8 +6,7 @@ public class MenuUtil {
         System.out.println(
                 "========== Type Speed Game ==========\n" +
                         "[1]. PLAY \n" +
-                        "[2]. SCORE \n" +
-                        "[3]. EXIT"
+                        "[2]. EXIT"
         );
         return InputUtil.requiredInputInt("Select the option: ");
     }

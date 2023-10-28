@@ -3,19 +3,19 @@ package services;
 import util.InputUtil;
 import util.Util;
 
+import java.sql.Time;
 import java.time.LocalTime;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 public class GameServiceİmple implements services.imple.GameService {
     double correctWords = 0;
     double wps = 0;
     double wpm = 0;
 
-    @Override
+
     public void play() throws InterruptedException {
 
-        //Util.WordsFromUrl();
-        Util.writeScoreToDinamicArray();
         Util.writeWordsToDinamicArray();
 
         System.out.println();
@@ -39,17 +39,16 @@ public class GameServiceİmple implements services.imple.GameService {
             }
         }
         wpm = correctWords;
-        wps = correctWords / (((double) start / 1000) % 60) ;
+        wps = correctWords / (((double) start / 1000)) ;
+
+        double score = wps;
+        double socrewpm = wpm;
+
 
         System.out.println("WPM: " + wpm + "\n" +
                            "WPS: " + wps);
     }
 
-    @Override
-    public void score() throws InterruptedException {
-        wpm = correctWords;
-        System.out.println("Your Score: " + wpm);
-    }
 
     @Override
     public void exit() {

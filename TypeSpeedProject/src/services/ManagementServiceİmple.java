@@ -17,17 +17,11 @@ public class ManagementServiceİmple implements services.imple.ManagementService
                     gameService.play();
                     break;
                 case 2:
-                    GameService gameService1 = new GameServiceİmple();
-                    gameService1.score();
-                    break;
-                case 3:
                     GameService gameService2 = new GameServiceİmple();
                     gameService2.exit();
                     break;
                 default:
                     System.out.println("Enter the correct option!");
-
-
             }
         }
     }
